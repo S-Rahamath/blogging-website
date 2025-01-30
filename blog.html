@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGZ</title>
+    <link href="C:\Users\shaik\OneDrive\Desktop\blogicon.png" rel="icon">
+    <link rel="stylesheet" href="styles.css">
+        <style>
+        /* Set the background image for the entire body */
+        body {
+            font-family: Times New Roman ;
+            margin: 0;
+            padding: 0;
+            background: url('blogbg1.jpeg') no-repeat center center fixed; /* Initial background image */
+            background-size: cover; /* Ensure the background covers the full page */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the body content */
+            min-height: 100vh; /* Ensure the body height stretches to full screen */
+            transition: background 1s ease-in-out; /* Smooth transition */
+           overflow-x: hidden;
+        }
+
+        /* Header section */
+        header {
+            background: rgba(135, 206, 235, 0.9); /* skyblue with transparency */
+            color: white;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+            position: relative;
+        }
+
+        #logo {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            width: 200px; /* Adjust the size of your logo */
+            height: 130px;
+        }
+
+        /* Navigation bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background:skyblue;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: blod;
+            padding: 10px 20px;
+            margin: 5px;
+            background: #444;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            
+        }
+
+                }
+
+        /* Main content area */
+      main {
+    padding: 20px;
+    margin-right: 150px;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 80px; /* Ensure space for the footer */
+}
+        .hidden {
+            display: none;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden; /* Ensures the images don't overflow */
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px; /* Adjust the height for landscape images */
+            object-fit: cover; /* Ensures the image is properly scaled */
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Write, View, Home section */
+         #viewInterface, #homeInterface {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 3000px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+#writeInterface {
+    background: rgba(255, 255, 255, 0.9); /* Adjusted transparency to make it more visible */
+    padding: 100px;
+    margin: 20px auto;
+    max-width: 2000px; /* Increased the width to 1200px */
+    width: 90%; /* Ensures the box takes up 90% of the screen width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+        /* Footer section */
+        footer {
+            background: rgba(51, 51, 51, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 10px;
+            
+        }
+.auth-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .auth-container input {
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .auth-container button {
+            padding: 10px;
+            width: 220px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .auth-container button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo added here -->
+        <img src="BLOGZ.gif" id="logo" alt="Blog Logo">
+       <italic <h1><marquee direction="LEFT" width="100%" bgcolor="light pink" style="font-size: 35px; color:white;">
+        WELCOME TO OUR BLOGGING SITE!
+    </marquee></h1></italic>
+    </header>
+    <nav>
+        <a href="#" onclick="showInterface('home')">Home</a>
+        <a href="#" onclick="showInterface('write')">Write Blog</a>
+        <a href="#" onclick="showInterface('view')">View Blog</a>
+        <a href="#" onclick="showInterface('login')">Login</a>
+        <a href="#" onclick="showInterface('signup')">Sign Up</a>
+    </nav>
+    
+    <main>
+        <section id="homeInterface">
+           <h2 style="color: blue; text-align: center; font-size: 36px;">Latest Blogs</h2>
+            <div class="blog-container" id="blogsContainer">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                    <img src="slide1.jpg" alt="Blog 1 Image">
+                    <h3>Exploring the Mountains</h3>
+                    <p>Discover the hidden gems of the mountain range, from serene lakes to challenging trails. A perfect escape for nature lovers.</p>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                    <img src="slide2.jpg" alt="Blog 2 Image">
+                    <h3>City Life in New York</h3>
+                    <p>The hustle and bustle of New York City are unmatched. Explore the heart of the city, its art, food, and culture.</p>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                    <img src="slide3.jpg" alt="Blog 3 Image">
+                    <h3>Underwater Adventures</h3>
+                    <p>Venture beneath the waves to witness the beautiful marine life and breathtaking coral reefs. A journey into the unknown.</p>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="blog-card">
+                    <img src="slide4.jpg" alt="Blog 4 Image">
+                    <h3>A Day in the Forest</h3>
+                    <p>Immerse yourself in the tranquility of the forest, with its diverse wildlife and lush greenery. A perfect way to reconnect with nature.</p>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="blog-card">
+                    <img src="slide5.jpg" alt="Blog 5 Image">
+                    <h3>Adventure in the Desert</h3>
+                    <p>Experience the vastness of the desert, from golden sand dunes to the quiet beauty of the starry night sky.</p>
+                </div>
+
+                <!-- Blog Card 6 -->
+                <div class="blog-card">
+                    <img src="slide6.jpg" alt="Blog 6 Image">
+                    <h3>Exploring Ancient Ruins</h3>
+                    <p>Take a journey through history as we explore ancient ruins, uncovering the secrets of civilizations long gone.</p>
+                </div>
+
+                <!-- Blog Card 7 -->
+                <div class="blog-card">
+                    <img src="slide7.jpg" alt="Blog 7 Image">
+                    <h3>Sunset at the Beach</h3>
+                    <p>Relax by the shore as the sun sets over the horizon, casting vibrant colors across the sky and the ocean.</p>
+                </div>
+
+                <!-- Blog Card 8 -->
+                <div class="blog-card">
+                    <img src="slide8.jpg" alt="Blog 8 Image">
+                    <h3>Winter Wonderland</h3>
+                    <p>Step into a magical world of snow-covered trees and frozen lakes. A perfect winter escape for the adventurous spirit.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="writeInterface" class="hidden">
+    <h2 style="color: blue; text-align: center; font-size: 35px;">Write Your Blog Here.........</h2>
+
+    <h4 style="color: black; text-align: center; font-size: 25px;">Blog Title</h4>
+    <input type="text" id="blogTitle" placeholder="Enter Blog Title" required style="width: 100%; padding: 10px; font-size: 18px; margin: 10px 0;"><br>
+
+    <h4 style="color: black; text-align: center; font-size: 25px;">Enter Your Blog Content</h4>
+    <textarea id="blogContent" placeholder="Write your blog here..." required style="width: 100%; height: 200px; padding: 10px; font-size: 18px; margin: 10px 0;"></textarea><br>
+
+    <h4 style="color: black; text-align: center; font-size: 25px;">Upload Your Blog Images</h4>
+    <input type="file" id="blogImage" accept="image/*" style="padding: 10px; font-size: 18px; margin: 10px 0;"><br>
+    <button onclick="addBlog()" style="padding: 15px 30px; font-size: 18px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Upload Blog</button><br>
+</section>
+    
+        <section id="viewInterface" class="hidden">
+            <h2 style="color: blue; text-align: center; font-size: 36px;">View Blogs</h2>
+
+            <div id="viewBlogsContainer" class="blog-container"></div>
+        </section>
+         <section id="signupInterface" class="hidden">
+             <h2 style="color: blue; text-align: center; font-size: 35px;">Sign Up</h2>
+            <div class="auth-container">
+                <input type="text" id="signupUsername" placeholder="Enter Username" required>
+                <input type="password" id="signupPassword" placeholder="Enter Password" required>
+                <button onclick="signup()">Sign Up</button>
+            </div>
+        </section>
+
+        <!-- Login Interface -->
+        <section id="loginInterface" class="hidden">
+           <h2 style="color: blue; text-align: center; font-size: 35px;">Login</h2>
+            <div class="auth-container">
+                <input type="text" id="loginUsername" placeholder="Enter Username" required>
+                <input type="password" id="loginPassword" placeholder="Enter Password" required>
+                <button onclick="login()">Login</button>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer id="footer">
+        <span&copy; Copyright <strong><span>2025 Blogging Site</span></strong>. All Rights Reserved</span><br><br>
+        <span><strong>Email: blogz@gmail.com</span><strong><br><br>
+        <span>Phone: +91 9998733700</span><br><br>
+        <span>Website: www.blogz.com</span>
+    </footer>
+    
+    <section id="editInterface" class="hidden">
+    <h2>Edit Your Blogs</h2>
+    <div id="editBlogsContainer" class="blog-container"></div>
+</section>
+
+<script>
+        let currentUser = null;  // Store the currently logged-in user
+
+        // Function to show interfaces
+        function showInterface(interfaceId) {
+            // Hide all interfaces
+            document.querySelectorAll("main section").forEach(section => section.classList.add('hidden'));
+            document.getElementById(interfaceId + 'Interface').classList.remove('hidden');
+
+            if (interfaceId === 'home' || interfaceId === 'view') {
+                loadBlogs();
+            }
+        }
+
+        // Signup function
+        function signup() {
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+
+            if (username && password) {
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+                // Check if username exists
+                if (users.some(user => user.username === username)) {
+                    alert("Username already exists. Please choose another.");
+                } else {
+                    users.push({ username, password });
+                    localStorage.setItem('users', JSON.stringify(users));
+                    alert("Sign-up successful! Please log in.");
+                    showInterface('login');  // Redirect to login after signup
+                }
+            } else {
+                alert("Please fill in both fields.");
+            }
+        }
+
+        // Login function
+        function login() {
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (username && password) {
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+                let user = users.find(u => u.username === username && u.password === password);
+
+                if (user) {
+                    currentUser = username;  // Set the logged-in user
+                    alert("Login successful!");
+                    showInterface('home');  // Go to home after login
+                    loadBlogs();
+                } else {
+                    alert("Invalid username or password.");
+                }
+            } else {
+                alert("Please fill in both fields.");
+            }
+        }
+
+        // Function to add a blog (stores in localStorage)
+        function addBlog() {
+            if (!currentUser) {
+                alert("You must be logged in to write a blog.");
+                return;
+            }
+
+            const title = document.getElementById("blogTitle").value;
+            const content = document.getElementById("blogContent").value;
+            const imageInput = document.getElementById("blogImage");
+
+            if (title && content) {
+                let blogId = Date.now(); // Unique ID for each blog
+                let imgURL = "";
+
+                if (imageInput.files.length > 0) {
+                    imgURL = URL.createObjectURL(imageInput.files[0]);
+                }
+
+                let blogData = { id: blogId, title, content, imgURL, blogger: currentUser };
+                let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+                blogs.push(blogData);
+                localStorage.setItem("blogs", JSON.stringify(blogs));
+
+                document.getElementById("blogTitle").value = "";
+                document.getElementById("blogContent").value = "";
+                imageInput.value = "";
+
+                loadBlogs();
+                showInterface('home');
+            } else {
+                alert("Please enter a title and content for the blog.");
+            }
+        }
+
+        // Function to load and display blogs in "View Blogs" and "Home"
+        function loadBlogs() {
+            const viewContainer = document.getElementById("viewBlogsContainer");
+            const homeContainer = document.getElementById("blogsContainer");
+
+            viewContainer.innerHTML = "";
+            document.querySelectorAll("#blogsContainer .user-blog").forEach(el => el.remove());
+
+            let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+
+            blogs.forEach(blog => {
+                let blogElement = createBlogCard(blog, blog.blogger === currentUser);
+                let homeElement = createBlogCard(blog, false);
+                homeElement.classList.add("user-blog");
+
+                viewContainer.appendChild(blogElement);
+                homeContainer.appendChild(homeElement);
+            });
+        }
+
+        // Function to create a blog card
+        function createBlogCard(blog, allowEdit = false) {
+            let blogElement = document.createElement("div");
+            blogElement.classList.add("blog-card");
+
+            blogElement.innerHTML = `
+                <h3>${blog.title}</h3>
+                <p>${blog.content}</p>
+                ${blog.imgURL ? `<img src="${blog.imgURL}" style="width:100%; border-radius:5px; margin-top:10px;">` : ""}
+                ${allowEdit ? `
+                    <button onclick="editBlog(${blog.id})">Edit</button>
+                    <button onclick="deleteBlog(${blog.id})">Delete</button>
+                ` : ""}
+            `;
+            return blogElement;
+        }
+
+        // Function to edit a blog (only if the logged-in user is the blogger)
+        function editBlog(blogId) {
+            let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+            let blog = blogs.find(b => b.id === blogId);
+
+            if (blog && blog.blogger === currentUser) {
+                let newTitle = prompt("Edit Blog Title:", blog.title);
+                let newContent = prompt("Edit Blog Content:", blog.content);
+
+                if (newTitle && newContent) {
+                    blog.title = newTitle;
+                    blog.content = newContent;
+                    localStorage.setItem("blogs", JSON.stringify(blogs));
+                    loadBlogs();
+                }
+            } else {
+                alert("You can only edit your own blogs.");
+            }
+        }
+
+        // Function to delete a blog (only if the logged-in user is the blogger)
+        function deleteBlog(blogId) {
+            let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+            blogs = blogs.filter(blog => blog.id !== blogId);
+            localStorage.setItem("blogs", JSON.stringify(blogs));
+            loadBlogs();
+        }
+    </script></body>
+</html>
